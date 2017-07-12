@@ -1,0 +1,184 @@
+<db>
+	<type>oracle>
+	
+	<datatypes>
+	
+		<datatype>
+			<class>CHAR</class>
+			<description></description>
+			<category>character</category>
+			<mask>CHAR(size)</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>2000</max>
+				</size>
+			</spec>
+		</datatype>
+	
+		<datatype>
+			<class>VARCHAR2</class>
+			<description></description>
+			<category>character</category>
+			<mask>VARCHAR2(size)</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>4000</max>
+				</size>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>NCHAR</class>
+			<description></description>
+			<category>character</category>
+			<mask>NCHAR(size)</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>2000</max>
+				</size>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>NVARCHAR2</class>
+			<description></description>
+			<category>character</category>
+			<mask>NVARCHAR2(size)</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>4000</max>
+				</size>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>CLOB</class>
+			<description></description>
+			<category>character</category>
+			<mask>CLOB</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>8 terabytes</max>
+				</size>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>NCLOB</class>
+			<description></description>
+			<category>character</category>
+			<mask>NCLOB</mask>
+			
+			<spec>
+				<size>
+					<min>1</min>
+					<max>8 terabytes</max>
+				</size>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>NUMBER</class>
+			<description></description>
+			<category>numeric</category>
+			<mask>NUMBER [ (p [, s]) ]</mask>
+			<spec>
+				<p>
+					<min>1</min>
+					<max>38</max>
+				</p>
+			</spec>
+			
+		</datatype>
+		
+		<datatype>
+			<class>BINARY_FLOAT</class>
+			<description>Enables faster arithmetic calculations and usually reduces storage requirements. BINARY_FLOAT 32-bit, single-precision floating-point number datatype. Each BINARY_FLOAT value requires 5 bytes, including a size byte.</description>
+			<category>numeric</category>
+			<mask>BINARY_FLOAT</mask>
+			
+			
+			
+		</datatype>
+		
+		<datatype>
+			<class>BINARY_DOUBLE</class>
+			<description>Enables faster arithmetic calculations and usually reduces storage requirements. BINARY_DOUBLE is a 64-bit, double-precision floating-point number datatype. Each BINARY_DOUBLE value requires 9 bytes, including a size byte.</description>
+			<category>numeric</category>
+			<mask>BINARY_DOUBLE</mask>
+			
+		</datatype>
+		
+		<datatype>
+			<class>DATE</class>
+			<description>Valid date range from January 1, 4712 BC, to December 31, 9999 AD. The default format is determined explicitly by the NLS_DATE_FORMAT parameter or implicitly by the NLS_TERRITORY parameter. The size is fixed at 7 bytes. This datatype contains the datetime fields YEAR, MONTH, DAY, HOUR, MINUTE, and SECOND. It does not have fractional seconds or a time zone.</description>
+			<category>datetime</category>
+			<mask>DATE</mask>
+		</datatype>
+		
+		<datatype>
+			<class>TIMESTAMP</class>
+			<description>Year, month, and day values of date, as well as hour, minute, and second values of time, where fractional_seconds_precision is the number of digits in the fractional part of the SECOND datetime field. Accepted values of fractional_seconds_precision are 0 to 9. The default is 6. The default format is determined explicitly by the NLS_DATE_FORMAT parameter or implicitly by the NLS_TERRITORY parameter. The sizes varies from 7 to 11 bytes, depending on the precision. This datatype contains the datetime fields YEAR, MONTH, DAY, HOUR, MINUTE, and SECOND. It contains fractional seconds but does not have a time zone.</description>
+			<category>datetime</category>
+			<mask>TIMESTAMP [(fractional_seconds_precision)]</mask>
+		</datatype>
+		
+		
+		<datatype>
+			<class>TIMESTAMP</class>
+			<description>Year, month, and day values of date, as well as hour, minute, and second values of time, where fractional_seconds_precision is the number of digits in the fractional part of the SECOND datetime field. Accepted values of fractional_seconds_precision are 0 to 9. The default is 6. The default format is determined explicitly by the NLS_DATE_FORMAT parameter or implicitly by the NLS_TERRITORY parameter. The sizes varies from 7 to 11 bytes, depending on the precision. This datatype contains the datetime fields YEAR, MONTH, DAY, HOUR, MINUTE, and SECOND. It contains fractional seconds but does not have a time zone.</description>
+			<category>datetime</category>
+			<mask>TIMESTAMP [(fractional_seconds_precision)]</mask>
+		</datatype>
+		
+		<datatype>
+			<class>TIMESTAMP_WITH_TIME_ZONE</class>
+			<description>All values of TIMESTAMP as well as time zone displacement value, where fractional_seconds_precision is the number of digits in the fractional part of the SECOND datetime field. Accepted values are 0 to 9. The default is 6. The default format is determined explicitly by the NLS_DATE_FORMAT parameter or implicitly by the NLS_TERRITORY parameter. The size is fixed at 13 bytes. This datatype contains the datetime fields YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, TIMEZONE_HOUR, and TIMEZONE_MINUTE. It has fractional seconds and an explicit time zone.</description>
+			<category>datetime</category>
+			<mask>TIMESTAMP [(fractional_seconds_precision)] WITH TIME ZONE</mask>
+		</datatype>
+		
+		<datatype>
+			<class>TIMESTAMP_WITH_LOCAL_TIME_ZONE</class>
+			<description>All values of TIMESTAMP WITH TIME ZONE, with the following exceptions: Data is normalized to the database time zone when it is stored in the database. When the data is retrieved, users see the data in the session time zone. The default format is determined explicitly by the NLS_DATE_FORMAT parameter or implicitly by the NLS_TERRITORY parameter. The sizes varies from 7 to 11 bytes, depending on the precision.</description>
+			<category>datetime</category>
+			<mask>TIMESTAMP [(fractional_seconds_precision)] WITH LOCAL TIME ZONE</mask>
+		</datatype>
+		
+		<datatype>
+			<class>BLOB</class>
+			<description></description>
+			<category>lob</category>
+			<mask>BLOB</mask>
+		</datatype>
+		
+		<datatype>
+			<class>BFILE</class>
+			<description></description>
+			<category>lob</category>
+			<mask>BFILE</mask>
+		</datatype>
+		
+
+		
+		
+	</datatypes>
+	
+	
+
+</db>
